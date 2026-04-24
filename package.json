@@ -1,0 +1,20 @@
+{
+  "name": "ai-avatar-backend",
+  "version": "1.0.0",
+  "description": "AI Avatar Backend - Personal Resume Assistant",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": ["ai", "avatar", "backend", "nodejs"],
+  "author": "Priyanka",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
