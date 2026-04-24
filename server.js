@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 
-const askAI = require("./services/aiEngine"); // correct path
+const askAI = require("./services/aiEngine");
 
 const app = express();
 
@@ -10,15 +10,15 @@ app.use(express.json());
 
 // API route
 app.post("/ask", (req, res) => {
-  const { message } = req.body; // ✅ FIXED
+  const { message } = req.body;
 
   if (!message) {
     return res.status(400).json({ error: "Message is required" });
   }
 
-  const reply = askAI(message); // ✅ consistent naming
+  const reply = askAI(message);
 
-  res.json({ reply }); // ✅ frontend expects 'reply'
+  res.json({ reply });
 });
 
 // health check
@@ -26,9 +26,9 @@ app.get("/", (req, res) => {
   res.send("AI Avatar Backend Running 🚀");
 });
 
-// start server
-const PORT = 5000;
+// ✅ FIXED PORT (IMPORTANT)
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
