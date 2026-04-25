@@ -7,7 +7,7 @@ const projects = [
       "Full stack web application built for an international business with responsive UI and backend API integration.",
     link: "https://banisbakery-project-nwhi2igeq-priyankas-projects-a6a1fab7.vercel.app/",
     github: "https://github.com/9940-pg/Banisbakery-project",
-    image: "/images/banisbakery.png", // ✅ FIXED
+    image: "/images/fitergenerator.png", // ✅ FIXED
     details: {
       frontend: "Responsive UI with clean design and smooth UX",
       backend: "REST APIs using Node.js and Express",
